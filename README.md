@@ -14,7 +14,7 @@ This repository houses the components needed to build [NetBox](https://github.co
 To get NetBox up and running:
 
  1. Install Virtual Platform & Vagrant (if not installed already)
- 2. Clone [netbox-vagrant git repo](https://github.com/ryanmerolle/netbox-vagrant/) or just download the [Vagrantfile](Vagrantfile)
+ 2. Clone [netbox-vagrant git repo](https://github.com/ryanmerolle/netbox-vagrant/) ```# git clone https://github.com/ryanmerolle/netbox-vagrant/ .``` or just download the [Vagrantfile](Vagrantfile)
  3. Navigate to local repo directory & start vagrant
 ```# vagrant up```
  4. Log into VM (optional)
@@ -35,7 +35,7 @@ The [NetBox installation](https://github.com/digitalocean/netbox/blob/develop/do
 * Apache (I'll convert this to ngnix soon)
 
 ## Security
-* Netbox/Django superuser account is "admin" with a password "admin" and an email of "admin@example.com" (all without quotes and can be changed after startup)
+* Netbox/Django superuser account is ```admin``` with a password ```admin``` and an email of ```admin@example.com``` (can be changed after startup)
 * SECRET_KEY is randomly generated using generate_secret_key.py
 * Postgres DB is setup using account is "nebox" with a password "J5brHrAXFLQSif0K" and the database "netbox" using the default port (all without quotes and can be changed after startup)
 * [Forwarded Ports](https://www.vagrantup.com/docs/networking/forwarded_ports.html) - to add additional VM access / port forwarding (ssh, remote psql, etc)
@@ -44,4 +44,9 @@ The [NetBox installation](https://github.com/digitalocean/netbox/blob/develop/do
 ## Notes
 * [bootstrap.sh](bootstrap.sh) can be used to bootstrap any Ubuntu Xenial setup & not just Vagrant
 * netbox-vagrant setup files are deleted once VM is fully provisioned
-* See [NetBox](https://github.com/digitalocean/netbox/) for more info on using NetBox.
+* Additional Support Resources include:
+ * [NetBox Github page](https://github.com/digitalocean/netbox/)
+ * [NetBox Read the Docs](http://netbox.readthedocs.io/en/stable/)
+ * [NetBox-discuss mailing list](https://groups.google.com/forum/#!forum/netbox-discuss)
+ * [Join the Network to Code community on Slack](https://networktocode.herokuapp.com) - Once setup join the **#netbox** room for help.  I'm 88(@ryanmerolle)** usually in this slack room.
+ * Join NetBox community on IRC in **#netbox** on **irc.freenode.net**! (@ryanmerolle does not join currently)
