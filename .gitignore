@@ -1,0 +1,5 @@
+### Vagrant ###
+**/.vagrant
+
+### Log Files ###
+*.log*

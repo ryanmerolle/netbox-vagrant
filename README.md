@@ -1,0 +1,47 @@
+# netbox-vagrant
+
+**Nuthshell:** Quickest NetBox install for Demo or Production(*recommended that you tweak slightly for production*).
+
+This repository houses the components needed to build [NetBox](https://github.com/digitalocean/netbox/) using [Vagrant](https://www.vagrantup.com/intro/index.html) and VirtualBox. It is a work in progress; please submit a bug report for any issues you encounter.
+
+[Vagrant Getting Started](https://www.vagrantup.com/intro/getting-started/index.html) - Quick setup requires installing VirtualBox and Vagrant (selected your supported OS in the links below).
+
+  * [VirtualBox](https://www.virtualbox.org/wiki/Downloads) - You can replace with other virtual platforms.  See Vagrant Getting Started above.
+  * [Vagrant](https://www.vagrantup.com/downloads.html)
+
+## Quickstart
+
+To get NetBox up and running:
+
+ 1. Install Virtual Platform & Vagrant (if not installed already)
+ 2. Clone [netbox-vagrant git repo](https://github.com/ryanmerolle/netbox-vagrant/) or just download the [Vagrantfile](Vagrantfile)
+ 3. Navigate to local repo directory & start vagrant
+```# vagrant up```
+ 4. Log into VM (optional)
+```# vagrant ssh```
+ 5. Play with Netbox demo in browser of choice [http://netbox.localhost:8080](http://netbox.localhost:8080) (Admin credentials use "admin" for userid and password - can be changed & credentials do not have quotes)
+
+## Upgrading
+The [normal NetBox upgrade process](https://github.com/digitalocean/netbox/blob/develop/docs/installation/upgrading.md) can be followed using the instructions to Clone the Git Repository (latest master release).
+
+## Netbox Configuration Used
+The [NetBox installation](https://github.com/digitalocean/netbox/blob/develop/docs/installation/netbox.md) process is followed leveraging:
+
+* VM Memory: 4096 (edit Vagrantfile if you would like to change)
+* VM CPUs: 2
+* Ubuntu Xenial64 (updated)
+* Python 2
+* Cloning the Git Repository (as opposed to downloading a tar of a particular release)
+* Apache (I'll convert this to ngnix soon)
+
+## Security
+* Netbox/Django superuser account is "admin" with a password "admin" and an email of "admin@example.com" (all without quotes and can be changed after startup)
+* SECRET_KEY is randomly generated using generate_secret_key.py
+* Postgres DB is setup using account is "nebox" with a password "J5brHrAXFLQSif0K" and the database "netbox" using the default port (all without quotes and can be changed after startup)
+* [Forwarded Ports](https://www.vagrantup.com/docs/networking/forwarded_ports.html) - to add additional VM access / port forwarding (ssh, remote psql, etc)
+* [Vagrant Credentials](https://www.vagrantup.com/docs/boxes/base.html#default-user-settings) - to understand credentials used for vagrant / Ubuntu VM
+
+## Notes
+* [bootstrap.sh](bootstrap.sh) can be used to bootstrap any Ubuntu Xenial setup & not just Vagrant
+* netbox-vagrant setup files are deleted once VM is fully provisioned
+* See [NetBox](https://github.com/digitalocean/netbox/) for more info on using NetBox.
