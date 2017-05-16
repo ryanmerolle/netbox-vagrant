@@ -2,7 +2,7 @@
 
 **Nuthshell:** Quickest NetBox install for Demo or Production(*recommended that you tweak slightly for production*).
 
-This repository houses the components needed to build [NetBox](https://github.com/digitalocean/netbox/) using [Vagrant](https://www.vagrantup.com/intro/index.html) and VirtualBox. It is a work in progress; please submit a bug report for any issues you encounter.
+This repository houses the components needed to build [NetBox](https://github.com/digitalocean/netbox/) using [Vagrant](https://www.vagrantup.com/intro) and [VirtualBox](https://www.virtualbox.org). It is a work in progress; please submit a bug report for any issues you encounter.
 
 [Vagrant Getting Started](https://www.vagrantup.com/intro/getting-started/index.html) - Quick setup requires installing VirtualBox and Vagrant (selected your supported OS in the links below).
 
@@ -14,7 +14,7 @@ This repository houses the components needed to build [NetBox](https://github.co
 To get NetBox up and running:
 
  1. Install Virtual Platform & Vagrant (if not installed already)
- 2. Clone [netbox-vagrant git repo](https://github.com/ryanmerolle/netbox-vagrant/) ```# git clone https://github.com/ryanmerolle/netbox-vagrant/ .``` or just download the [Vagrantfile](Vagrantfile)
+ 2. Clone [netbox-vagrant git repo](https://github.com/ryanmerolle/netbox-vagrant/) ```# git clone https://github.com/ryanmerolle/netbox-vagrant/ .``` or just download both [Vagrantfile](Vagrantfile) & [bootstrap.sh](bootstrap.sh) and place in the directory you want to launch vagrant from.
  3. Navigate to local repo directory & start vagrant
 ```# vagrant up```
  4. Log into VM (optional)
