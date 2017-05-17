@@ -48,5 +48,5 @@ The [NetBox installation](https://github.com/digitalocean/netbox/blob/develop/do
  * [NetBox Github page](https://github.com/digitalocean/netbox/)
  * [NetBox Read the Docs](http://netbox.readthedocs.io/en/stable/)
  * [NetBox-discuss mailing list](https://groups.google.com/forum/#!forum/netbox-discuss)
- * [Join the Network to Code community on Slack](https://networktocode.herokuapp.com) - Once setup join the **#netbox** room for help.  I'm 88(@ryanmerolle)** usually in this slack room.
+ * [Join the Network to Code community on Slack](https://networktocode.herokuapp.com) - Once setup join the **#netbox** room for help.  I'm **ryanmerolle** & usually in this slack room.
  * Join NetBox community on IRC in **#netbox** on **irc.freenode.net**! (@ryanmerolle does not join currently)
