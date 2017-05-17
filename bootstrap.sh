@@ -83,7 +83,7 @@ python /opt/netbox/netbox/manage.py migrate
 
 # Create admin / admin superuser
 printf "Step 16 of 19: Create NetBox superuser..."
-echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin@example.com', 'admin', 'admin')" | python /opt/netbox/netbox/manage.py shell
+echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | python /opt/netbox/netbox/manage.py shell --plain
 
 # Collect Static Files
 printf "Step 17 of 19: collectstatic"
@@ -99,6 +99,7 @@ rm -rf /tmp/netbox-vagrant/
 printf "netbox-vagrant setup files deleted...\n"
 
 # Status Complete
-printf "COMPLETE: NetBox-Demo Provisioning COMPLETE!!"
-printf "To login to the Vagrant VM use vagrant ssh in the current directory"
-printf "To login to the Netbox-Demo webportal go to http://netbox.localhost:8080"
+printf "%s\nCOMPLETE: NetBox-Demo Provisioning COMPLETE!!"
+printf "%s\nTo login to the Vagrant VM use vagrant ssh in the current directory"
+printf "%s\nTo login to the Netbox-Demo web portal go to http://netbox.localhost:8080"
+printf "%s\nWeb portal superuser credentials are admin / admin"
