@@ -6,7 +6,8 @@ export DEBIAN_FRONTEND=noninteractive
 # Install Git
 printf "Step 1 of 19: Installing git & cloning netbox-vagrant..."
 apt-get install git -y -qq > /dev/null
-cd /tmp/ && git clone -b master https://github.com/ryanmerolle/netbox-vagrant.git
+# cd /tmp/ && git clone -b master https://github.com/ryanmerolle/netbox-vagrant.git
+cd /tmp/ && git clone -b develop https://github.com/ryanmerolle/netbox-vagrant.git
 
 # Update Ubuntu
 printf "Step 2 of 19: Updating Ubuntu..."
@@ -39,7 +40,9 @@ printf "Step 8 of 19: Cloning NetBox repo..."
 # Create netbox base directory & navigate to it
 mkdir -p /opt/netbox/ && cd /opt/netbox/
 # git clone netbox master branch
-git clone -b master https://github.com/digitalocean/netbox.git .
+# git clone -b master https://github.com/digitalocean/netbox.git .
+# git clone ryanmerolle develop branch for new seed data
+git clone -b develop https://github.com/ryanmerolle/netbox.git .
 
 # Upgrade pip
 printf "Step 8 of 19: Cloning NetBox repo..."
