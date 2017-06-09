@@ -57,7 +57,7 @@ sed -i "s/'USER': '',  /'USER': 'netbox',  /g" /opt/netbox/netbox/netbox/configu
 sed -i "s/'PASSWORD': '',  /'PASSWORD': 'J5brHrAXFLQSif0K',  /g" /opt/netbox/netbox/netbox/configuration.py
 sed -i "s/ALLOWED_HOSTS \= \[\]/ALLOWED_HOSTS \= \['netbox.internal.local', 'netbox.localhost', 'localhost', '127.0.0.1'\]/g" /opt/netbox/netbox/netbox/configuration.py
 SECRET_KEY=$( python /opt/netbox/netbox/generate_secret_key.py )
-sed -i "s/SECRET_KEY \= ''/SECRET_KEY = '$SECRET_KEY'/g" /opt/netbox/netbox/netbox/configuration.py
+sed -i "s~SECRET_KEY = ''~SECRET_KEY = '$SECRET_KEY'~g" /opt/netbox/netbox/netbox/configuration.py
 # Clear SECRET_KEY variable
 unset SECRET_KEY
 
