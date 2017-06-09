@@ -3,3 +3,6 @@
 
 ### Log Files ###
 *.log*
+
+### MISC ###
+*.DS_Store
