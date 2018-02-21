@@ -51,4 +51,3 @@ The [NetBox installation](https://github.com/digitalocean/netbox/blob/develop/do
  * [NAPALM Github page](https://github.com/napalm-automation/napalm/)
  * [NAPALM Read the Docs](https://napalm.readthedocs.io/)
  * [Join the Network to Code community on Slack](https://networktocode.herokuapp.com) - Once setup join the **#netbox** room for help.  I'm **ryanmerolle** & usually in this slack room.
- * Join NetBox community on IRC in **#netbox** on **irc.freenode.net**! (@ryanmerolle does not join currently)
