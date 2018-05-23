@@ -28,7 +28,8 @@ apt-get install python3 python3-dev python3-pip libxml2-dev libxslt1-dev libffi-
 
 # Upgrade pip
 printf "Step 6 of 19: Upgrading pip\n"
-pip3 install --upgrade pip > /dev/null
+#pip3 install --upgrade pip > /dev/null
+pip3 install --upgrade pip==9.0.3 > /dev/null
 
 # Install gunicorn & supervisor
 printf "Step 7 of 19: Installing gunicorn & supervisor..."
