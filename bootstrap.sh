@@ -78,7 +78,7 @@ python3 /opt/netbox/netbox/manage.py migrate > /dev/null
 
 # Create admin / admin superuser
 printf "Step 16 of 19: Create NetBox superuser..."
-echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | python3 /opt/netbox/netbox/manage.py shell  > /dev/null
+echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | python3 /opt/netbox/netbox/manage.py shell --plain  > /dev/null
 
 # Collect Static Files
 printf "Step 17 of 19: collectstatic"
