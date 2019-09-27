@@ -90,7 +90,7 @@ python3 /opt/netbox/netbox/manage.py loaddata initial_data > /dev/null
 
 # Install NAPALM Drivers
 printf "Step 19 of 19: Installing NAPALM Drivers"
-python3 /opt/netbox/netbox/manage.py loaddata initial_data > /dev/null
+pip3 install napalm
 
 # Fix permissions to folder
 chown -R www-data /opt/netbox/netbox/media/image-attachments/
