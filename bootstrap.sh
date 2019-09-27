@@ -92,6 +92,9 @@ python3 /opt/netbox/netbox/manage.py loaddata initial_data > /dev/null
 printf "Step 19 of 19: Installing NAPALM Drivers"
 python3 /opt/netbox/netbox/manage.py loaddata initial_data > /dev/null
 
+# Fix permissions to folder
+chown -R www-data /opt/netbox/netbox/media/image-attachments/
+
 # Status Complete
 printf "%s\nCOMPLETE: NetBox-Demo Provisioning COMPLETE!!"
 printf "%s\nTo login to the Vagrant VM use vagrant ssh in the current directory"
